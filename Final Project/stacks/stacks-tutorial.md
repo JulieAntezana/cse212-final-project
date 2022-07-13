@@ -17,7 +17,7 @@ A stack is a LIFO data structure, so new items are always added to the end of th
 
 To visualize the stack, imagine a toy that blasts foam balls from a container using a spring mechanism and air compression.
 
-![Stack Container](red-shooter.JPG)
+![Stack Container](intro.JPG)
 
 To load the toy, a ball must be pushed into the cup shaped opening at the end of the toy, where it is held in place with a rubber gasket.
 
