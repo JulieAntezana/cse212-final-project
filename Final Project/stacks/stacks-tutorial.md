@@ -4,10 +4,10 @@
 
 A stack is often referred to by the term "Last In, First Out" (LIFO). This describes the order in which items are added to the stack and removed from the stack.
 
-- Stacks are used everywhere in programming. 
-- Stacks can be used to model a pile of books, plates, cards, or anything that can be stacked. 
+- Stacks are used everywhere in programming.
+- Stacks can be used to model a pile of books, plates, cards, or anything that can be stacked.
 - They are used in compiler syntax checking for matching brackets and braces.
-- Stacks are useful for tasks that involve keeping a history and remembering the order items are added or removed. 
+- Stacks are useful for tasks that involve keeping a history and remembering the order items are added or removed.
 - Stacks are less efficient for tasks that involve searching for a specific item in the middle of the stack.
 - In Python, stacks can be implemented using a list.
 
@@ -19,7 +19,7 @@ To visualize the stack, imagine a toy that blasts foam balls from a container us
 
 ![Stack Container](red-shooter.JPG)
 
-To load the toy, a ball must be pushed into the cup shaped opening at the end of the toy, where it is held in place with a rubber gasket.  
+To load the toy, a ball must be pushed into the cup shaped opening at the end of the toy, where it is held in place with a rubber gasket.
 
 ![Push Operation](push.JPG)
 
@@ -46,7 +46,7 @@ The current function running is always on the back of the stack.
 
 ![Calling the Functions to the Stack](function-calls-1.JPG)
 
-When the function finishes, it is popped off the stack. The result is that the function to return to is the one that is on the back of the stack. 
+When the function finishes, it is popped off the stack. The result is that the function to return to is the one that is on the back of the stack.
 
 ![The Function Stack Remembers How to Get Back to Function A](function-calls-2.JPG)
 
@@ -65,7 +65,6 @@ push(value), pop(), size(), and empty(). A peek() operation may also be used. Se
 
 ![Stack Implementation Table](table.JPG)
 
-
 ## Key Terms
 
 - **back** - Refers to the location in a stack where a push and pop occurs. The last item put into the stack is found in the back.
@@ -78,28 +77,28 @@ push(value), pop(), size(), and empty(). A peek() operation may also be used. Se
 
 In this example, we reverse a string using stacks. For example “Racecar” will be reversed to “racecaR”.
 
-For this program, we will do the following: 
+For this program, we will do the following:
 
-1) Create an empty stack.
-2) Push each character from the string to the stack, one at a time.
-3) Pop each character from the stack and put it back to string, one at a time.
+1. Create an empty stack.
+2. Push each character from the string to the stack, one at a time.
+3. Pop each character from the stack and put it back to string, one at a time.
 
-```Python 
+```Python
 # Function to create an empty stack.
 # Initialize size of the stack as 0
 def createStack():
     stack=[]
     return stack
- 
+
 # Function to determine the size of the stack
 def size(stack):
     return len(stack)
- 
+
 # Stack is empty if the size is 0
 def isEmpty(stack):
     if size(stack) == 0:
         return True
- 
+
 # Function to add an item to stack .
 # It increases size by 1
 def push(stack,item):
@@ -111,36 +110,36 @@ def peek_stack(stack):
         return stack[-1]    # this will get the last element of stack
     else:
         return None
- 
+
 # Function to remove an item from stack.
 # It decreases size by 1
 def pop(stack):
-    if isEmpty(stack): 
+    if isEmpty(stack):
       return
     return stack.pop()
- 
+
 # A stack based function to reverse a string
 def reverse(string):
     n = len(string)
-     
+
     # Create a empty stack
     stack = createStack()
- 
+
     # Push all characters of string to stack
     for i in range(0,n,1):
         push(stack,string[i])
- 
+
     # Making the string empty since all
     #characters are saved in stack
     string=""
- 
+
     # Pop all characters of string and
     # put them back to string
     for i in range(0,n,1):
         string+=pop(stack)
-         
+
     return string
-     
+
 ################################
 #TEST 1
 ################################
@@ -168,27 +167,28 @@ print("\nTest 3: Reversed string is " + string)
 
 # Practice Exercise: Hi Lo Game
 
-In this exercise we will practice the use stacks to predict the winner of a simple card game with two players. The players use a deck of 36 cards. Each card has a number between 1 and 9. There are 4 sets of each number in the deck. In the game Player1 and Player2 are each presented with identical stacks of seven cards. 
+In this exercise we will practice the use stacks to predict the winner of a simple card game with two players. The players use a deck of 36 cards. Each card has a number between 1 and 9. There are 4 sets of each number in the deck. In the game Player1 and Player2 are each presented with identical stacks of seven cards.
 
-For each round of the game, each player selects a card and shows it to the other player. The value of the two cards are compared. If the value is the same for both players, then both players remove their cards from their stacks and discard them. Otherwise, the player with the lower value card removes the card from their stack and discards it. The player with the higher value card keeps the card on their stack, and the round ends. The higer card will be selected again in the next round, and will continue to be selected until the other player runs out of cards or selects a card with an equal or higher value. The game ends when a player runs out of cards, and the other player is declared the winner.
+Hi Lo Game Rules:
+For each round of the game, each player selects a card and shows it to the other player. The value of the two cards are compared. If the value is the same for both players, then both players remove their cards from their stacks and discard them. Otherwise, the player with the lower value card removes the card from their stack and discards it. The player with the higher value card keeps the card on their stack, and the round ends. The higher card will be selected again in the next round, and will continue to be selected until the other player runs out of cards or selects a card with an equal or higher value. The game ends when a player runs out of cards, and the other player is declared the winner. Alternatively, both players may run out of cards at the same time, and the game is declared a tie.
 
-Our program will take into account the differing strategies of the two players: Player1 selects cards from the top of their stack of cards. Player2 selects cards from the bottom of their stack of cards. Write the program to simulate these two strategies. Keep in mind that we are practising use of the stacks data structure functions only (no slice, dequeue or linked list functions). We will have to use our stack functions to assure that the correct card will be located at the back of the stack when the player shows their card. 
+Our program will take into account the differing strategies of the two players: Player1 selects cards from the top of their stack of cards. Player2 selects cards from the bottom of their stack of cards. Write the program to simulate these two strategies. Keep in mind that we are practising use of the stacks data structure functions only (no slice, dequeue or linked list functions). We will have to use our stack functions to assure that the correct card will be located at the back of the stack when the player shows their card.
 
 The program should do the following:
 
-1) Create an empty stack for Player1.
-2) One by one push all characters of string to Player1's stack.
-3) Reverse the string for Player2.
-4) Create an empty stack for Player2.
-5) One by one push all characters of the reversed string to Player2's stack.
-6) Create a while loop to start the game.
-7) Assign a variable for each player and use the function to show their selected card. 
-8) Create conditions that direct how to end the game.
-9) Create conditions that compare the selected cards shown and direct what should happen as a result of the comparison.
+1. Create an empty stack for Player1.
+2. One by one push all characters of string to Player1's stack.
+3. Order the string for Player2.
+4. Create an empty stack for Player2.
+5. One by one push all characters of the ordered string to Player2's stack.
+6. Create a while loop to start the game.
+7. Assign a variable for each player and use the function to show their selected card.
+8. Create conditions that direct how to end the game.
+9. Create conditions that compare the selected cards shown and direct what should happen as a result of the comparison.
 
-There are four different locations in the program where you need to write your own code.
+There are four different locations in the program where you need to write your own code. Make sure that your code has a time complexity equal to or better efficiency than O(n).
 
-After you have written your code, click [here](hi_lo_game.py) to see an example solution of how to write the code. Compare your code with the example solution.
+After you have written and tested your code, click [here](hi_lo_game.py) to see an example solution. Compare your code with the example solution.
 
 ```Python
 def hi_lo_game(string):
@@ -197,17 +197,17 @@ def hi_lo_game(string):
    # Create an empty stack for player1
    p1 = createStack()
 
-   # Push all characters of string to stack for player1
+   # Push each character of the string to the stack for player1
    for i in range(0,n,1):
       push(p1,string[i])
 
-   # Reverse the string for player2
+   # Order the string for player2
       # Write your code here.
 
    # Create an empty stack for player2
    p2 = createStack()
 
-   # Push all characters of string to stack for player2
+   # Push each character of the ordered string to the stack for player2
    for i in range(0,n,1):
       push(p2,string2[i])
 
@@ -235,17 +235,17 @@ def hi_lo_game(string):
             print("\nGame Over! Player 1 wins.")
             return
       # Both players select the same card
-      
+
       #Write your code here.
 
-      # Player1 selects card with higher value   
+      # Player1 selects card with higher value
 
       # Write your code here.
 
-      # Player2 selects card with higher value  
+      # Player2 selects card with higher value
 
       # Write your code here.
-      
+
 ################################
 #TEST 1
 ################################
@@ -287,3 +287,12 @@ test5 = hi_lo_game(string)
 # Expected result: Game Over! Tie game.
 ```
 
+## Resources
+
+The following resources were helpful in creating this tutorial:
+
+[BYUI - CSE 212 Lesson 3](https://byui-cse.github.io/cse212-course/lesson03/03-prepare.html)
+
+[youtube.com - "Data Structures Easy to Advanced Course" by William Fiset](https://www.youtube.com/watch?v=RBSGKlAvoiM)
+
+[geeksforgeeks.org - Stack | Set 3 (Reverse a string using stack)](https://www.geeksforgeeks.org/stack-set-3-reverse-string-using-stack/)
