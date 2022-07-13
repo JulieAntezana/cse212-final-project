@@ -86,7 +86,7 @@ For this program, we will do the following:
 ```Python
 # Function to create an empty stack.
 # Initialize size of the stack as 0
-def createStack():
+def newStack():
     stack=[]
     return stack
 
@@ -95,26 +95,25 @@ def size(stack):
     return len(stack)
 
 # Stack is empty if the size is 0
-def isEmpty(stack):
+def empty(stack):
     if size(stack) == 0:
         return True
 
-# Function to add an item to stack .
-# It increases size by 1
+# Function to add an item to a stack
 def push(stack,item):
     stack.append(item)
 
-# Function to return the value of the item at the back of the stack.
-def peek_stack(stack):
+# Function to return the value of the item at the back of a stack
+def peek(stack):
     if stack:
-        return stack[-1]    # this will get the last element of stack
+        return stack[-1]    # this will return the last element of stack
     else:
         return None
 
-# Function to remove an item from stack.
+# Function to remove an item from a stack
 # It decreases size by 1
 def pop(stack):
-    if isEmpty(stack):
+    if empty(stack):
       return
     return stack.pop()
 
@@ -122,10 +121,10 @@ def pop(stack):
 def reverse(string):
     n = len(string)
 
-    # Create a empty stack
-    stack = createStack()
+    # Create an empty stack
+    stack = newStack()
 
-    # Push all characters of string to stack
+    # Push all characters of the string to the new stack
     for i in range(0,n,1):
         push(stack,string[i])
 
@@ -133,8 +132,8 @@ def reverse(string):
     #characters are saved in stack
     string=""
 
-    # Pop all characters of string and
-    # put them back to string
+    # Pop each character of the stack and
+    # put them back into the string
     for i in range(0,n,1):
         string+=pop(stack)
 
@@ -195,7 +194,7 @@ def hi_lo_game(string):
    n = len(string)
 
    # Create an empty stack for player1
-   p1 = createStack()
+   p1 = newStack()
 
    # Push each character of the string to the stack for player1
    for i in range(0,n,1):
@@ -205,7 +204,7 @@ def hi_lo_game(string):
       # Write your code here.
 
    # Create an empty stack for player2
-   p2 = createStack()
+   p2 = newStack()
 
    # Push each character of the ordered string to the stack for player2
    for i in range(0,n,1):
@@ -214,10 +213,10 @@ def hi_lo_game(string):
    # Start the game loop
    while True:
       # Assign a variable to the function to select a card for Player1.
-      p1_card = peek_stack(p1)
+      p1_card = peek(p1)
 
       # Assign a variable to the function to select a card for Player2.
-      p2_card = peek_stack(p2)
+      p2_card = peek(p2)
 
       # Check length of stacks and provide conditions for ending the game.
       # Both players ran out of cards on the previous turn.
