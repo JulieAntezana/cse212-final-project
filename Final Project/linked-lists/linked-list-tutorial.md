@@ -3,7 +3,7 @@
 ## Introduction
 A linked list is a data structure made up of nodes that contain data which are stored in a random, non-contiguous way. To connect the nodes as a list, each node has a link that points to the next node on the list, which also contains data and a pointer link.
 
-![Linked List](intro.png)
+![Linked List](intro.JPG)
 
 ### Comparing Dynamic Array and Linked List
 * Linked lists are dynamic without fixed size limitations. 
@@ -301,7 +301,7 @@ class LinkedList:
 ## Linked Lists in Python
 Python has a built-in linked list available called deque. We will not be using it in this tutorial, but the following table is included here as a reference. You will need an import statement: **import deque**. To create an empty linked list: **link+list=deque()**.
 
-![Common Functions in Python Deque](deque.png)
+![Common Functions in Python Deque](deque.JPG)
 
 ## Key Terms
 **doubly-linked list** - A linked list that is bi-directional. The linked list will maintain both a head and a tail. To traverse in either direction, the node will have both a pointer to the next node and the previous node. Access to both the head and tail is O(1).
