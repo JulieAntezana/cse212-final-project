@@ -4,7 +4,13 @@ What is a Tree Data Structure?
 A tree is a non-linear, hierarchical data structure that is a collection of nodes and pointers. A binary tree has no more than two children for any of its nodes.
 
 ### Uses of Binary Tree
-Trees are useful when you want to store information that naturally forms a hierarchy. Some applications for binary trees are encoding and decoding operations, evaluating expressions, routing algorithms, fast memory allocation, used to perform quick searches, useful for indexing and storing cache in the system, used in editing spreadsheets, used in compilers, DOM in HTML, and file explorer. 
+Trees are useful when you want to store information that naturally forms a hierarchy. Some applications for binary trees are encoding and decoding operations, evaluating expressions, routing algorithms, fast memory allocation, used to perform quick searches, useful for indexing and storing cache in the system, used in compilers, DOM in HTML, used in spreadsheet software, 
+
+![BST used in Spreadsheet Software](excel.JPG)
+
+and file explorer.
+
+![BST used in File Explorer](explorer.JPG)
 
 ### Some advantages of Binary Tree:
 - Search operation is very fast
