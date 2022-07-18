@@ -2,42 +2,26 @@ from logging import root
 
 
 class BST:
-    """
-    Implement the Binary Search Tree (BST) data structure.  The Node 
-    class below is an inner class.  An inner class means that its real 
-    name is related to the outer class.  To create a Node object, we will 
-    need to specify BST.Node
-    """
+    # This class is to implement a Binary Search Tree
 
     class Node:
-        """
-        Each node of the BST will have data and links to the 
-        left and right sub-tree. 
-        """
+        # Each node has data and links to the left and right sub-tree
 
         def __init__(self, data):
-            """ 
-            Initialize the node to the data provided.  Initially
-            the links are unknown so they are set to None.
-            """
-       
+            # Initialize the node to the data. Links are set to None
             self.data = data
             self.left = None
             self.right = None
 
     def __init__(self):
-        """
-        Initialize an empty BST.
-        """
+        # Initialize an empty BST.
         self.root = None
 
     def insert(self, data):
-        """
-        Insert 'data' into the BST.  If the BST
-        is empty, then set the root equal to the new 
-        node.  Otherwise, use _insert to recursively
-        find the location to insert.
-        """
+        # This function will insert 'data' into the BST.  
+        # If the BST is empty, then set the root equal to the new 
+        # node.  Otherwise, use _insert to recursively
+        # find the location to insert.
         if self.root is None:
             self.root = BST.Node(data)
         else:
@@ -118,9 +102,7 @@ class BST:
 
 def create_bst_from_sorted_list(sorted_list):
     """
-    Given a sorted list (sorted_list), create a balanced BST.  If 
-    the values in the sorted_list were inserted in order from left
-    to right into the BST, then it would resemble a linked list (unbalanced). 
+    Given a sorted list, create a balanced BST.  
     To get a balanced BST, the _insert_middle function is called to 
     find the middle item in the list to add first to the BST.  The 
     _insert_middle function takes the whole list but also takes a 
@@ -133,8 +115,8 @@ def create_bst_from_sorted_list(sorted_list):
 
 def _insert_middle(sorted_list, first, last, bst):
     """
-    This function will attempt to insert the item in the middle
-    of 'sorted_list' into the 'bst' tree.  The middle is 
+    This function will insert the item in the middle
+    of the sorted list into the binary search tree.  The middle is 
     determined by using indicies represented by 'first' and 'last'.
     For example, if the function was called on:
 
@@ -145,8 +127,7 @@ def _insert_middle(sorted_list, first, last, bst):
     then the value 30 (index 2 which is the middle) would be added 
     to the 'bst' (the insert function above can be used to do this).   
 
-    Subsequent recursive calls are made to insert the middle from the values 
-    before 30 and the values after 30.  If done correctly, the order
+    Subsequent recursive calls are made to insert the middle from the values before 30 and the values after 30.  If done correctly, the order
     in which values are added (which results in a balanced bst) will be:
 
     30, 10, 20, 50, 40, 60

@@ -318,7 +318,7 @@ Python does not have a built-in BST class. There are packages available, such as
 ### Time Complexity 
 The worst-case time complexity of search and insert operations is O(h) where h is the height of the Binary Search Tree. In the worst case, we may have to travel from root to the deepest leaf node. The height of a skewed tree may become n and the time complexity of search and insert operation may become O(n). 
 ## Example Problem
-A balanced binary search tree (balanced BST) is a BST such that the difference of height between any two subtrees is not dramatically different. The example below shows an AVL tree which is balanced because the difference of height between subtrees is less than 2.
+A balanced binary search tree (balanced BST) is a BST such that the difference of height between any two subtrees is not dramatically different. The example below shows a tree which is balanced because the difference of height between subtrees is less than 2.
 
 ![Balanced Binary Search Tree](height.JPG)
 
@@ -373,13 +373,9 @@ After you have solved and tested the problem on your own, click [**here**](bst.p
 
 ```Python
 
-# NOTE: Functions below are not part of the BST class above. 
-
 def create_bst_from_sorted_list(sorted_list):
     """
-    Given a sorted list (sorted_list), create a balanced BST.  If 
-    the values in the sorted_list were inserted in order from left
-    to right into the BST, then it would resemble a linked list (unbalanced). 
+    Given a sorted list, create a balanced BST.  
     To get a balanced BST, the _insert_middle function is called to 
     find the middle item in the list to add first to the BST.  The 
     _insert_middle function takes the whole list but also takes a 
@@ -392,8 +388,8 @@ def create_bst_from_sorted_list(sorted_list):
 
 def _insert_middle(sorted_list, first, last, bst):
     """
-    This function will attempt to insert the item in the middle
-    of 'sorted_list' into the 'bst' tree.  The middle is 
+    This function will insert the item in the middle
+    of the sorted list into the binary search tree.  The middle is 
     determined by using indicies represented by 'first' and 'last'.
     For example, if the function was called on:
 
@@ -404,8 +400,7 @@ def _insert_middle(sorted_list, first, last, bst):
     then the value 30 (index 2 which is the middle) would be added 
     to the 'bst' (the insert function above can be used to do this).   
 
-    Subsequent recursive calls are made to insert the middle from the values 
-    before 30 and the values after 30.  If done correctly, the order
+    Subsequent recursive calls are made to insert the middle from the values before 30 and the values after 30.  If done correctly, the order
     in which values are added (which results in a balanced bst) will be:
 
     30, 10, 20, 50, 40, 60
