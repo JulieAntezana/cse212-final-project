@@ -375,7 +375,7 @@ In the problem below, the create_bst_from_sorted_list function will create a bal
 
 To accomplish a balanced BST, the _insert_middle function is needed to find the middle of the list and add it to the BST. Then the middle value from the first half, followed by the middle value from the second half, and so forth. This is a recursive process.
 
-After you have solved and tested the problem on your own, click [**here**](bst.py) to see a solution to the problem. You should only look at the solution after you have attempted to solve the problem first.
+After you have solved and tested the problem on your own, click [**here**](bst_solution.py) to see a solution to the problem. You should only look at the solution after you have attempted to solve the problem first.
 
 ```Python
 

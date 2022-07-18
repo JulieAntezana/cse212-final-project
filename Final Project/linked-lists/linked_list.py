@@ -172,21 +172,6 @@ class LinkedList:
             yield curr.data  # Provide (yield) each item to the user
             curr = curr.prev # Go backward in the linked list
 
-    def __iter__(self):
-        # This function will iterate forward through a linked list.
-        curr = self.head  # Start at the begining to go forward
-        while curr is not None:
-            yield curr.data  # Provide (yield) each item to the user
-            curr = curr.next # Go forward in the linked list
-
-    def __reversed__(self):
-        # This function will iterate backward through a linked list
-
-        curr = self.tail  # Start at the tail to go backward.
-        while curr is not None:
-            yield curr.data  # Provide (yield) each item to the user
-            curr = curr.prev # Go backward in the linked list
-
 # Sample test cases for the Example Problem as "linkedlist[expected results]":
 ll = LinkedList()
 ll.insert_tail(1)
