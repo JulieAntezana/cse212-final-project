@@ -1,6 +1,6 @@
 # Data Structures Tutorial
 
-Welcome to the Data Structures Tutorial. Every beginning Python programmer should understand these basic data structure topics:
+Welcome to the Data Structures Tutorial. This series of tutorials will help Python programmers to understand these basic data structure topics:
 
 [Stacks](./stacks/stacks-tutorial.md)
 
